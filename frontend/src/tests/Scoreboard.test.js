@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen, waitForElement } from "@testing-library/react";
+import { render } from "@testing-library/react";
 
 import Scoreboard from "../components/Scoreboard.js";
 
@@ -12,7 +12,7 @@ const playerMocks = {
 };
 
 describe("Scoreboard: ", () => {
-  it("should render", async () => {
+  it("should render", () => {
     const component = render(<Scoreboard {...playerMocks} />);
 
     expect(component.queryByTestId("game-scoreboard")).not.toBeNull();
