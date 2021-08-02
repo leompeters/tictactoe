@@ -109,6 +109,7 @@ class Scoreboard extends React.Component {
               <th>Wins</th>
               <th>Losses</th>
               <th>Draws</th>
+              <th>Win Ratio</th>
             </tr>
             {this.state.players.map(obj => (
               <tr key={obj.id}>
@@ -116,6 +117,7 @@ class Scoreboard extends React.Component {
                 <td> {obj.wins} </td>
                 <td> {obj.losses} </td>
                 <td> {obj.draws} </td>
+                <td> {obj.win_ratio} </td>
               </tr>
             ))}
             </tbody>

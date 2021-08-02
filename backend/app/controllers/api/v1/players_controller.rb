@@ -4,7 +4,7 @@ class Api::V1::PlayersController < ApplicationController
   before_action :set_player, only: %i[show update destroy]
   # GET /players
   def index
-    @players = Player.all
+    @players = Player.all_with_win_ratio
 
     render json: @players
   end
